@@ -13,6 +13,12 @@ class SearchSelection extends React.Component {
         super(props);
     }
 
+    onChange = (e,data) => {
+
+    this.props.callbackFromParent(data.value)
+
+  }
+
     render() {
      return (
 
@@ -22,6 +28,8 @@ class SearchSelection extends React.Component {
             search
             selection
             options={this.props.heroes}
+            onChange={this.onChange}
+
           />
      )
 
