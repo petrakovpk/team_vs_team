@@ -8,7 +8,7 @@ const Home = ({strings})=> (
 <Container>
     <Row>
         <Col>
-            lol 2
+            lol 3
         </Col>
     </Row>
 
