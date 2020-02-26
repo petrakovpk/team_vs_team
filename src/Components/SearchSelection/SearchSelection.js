@@ -29,7 +29,7 @@ const countryOptions = [
 
 const SearchSelection = () => (
   <Dropdown
-    placeholder='Ввыедите персонажа'
+    placeholder='Введите персонажа'
     fluid
     search
     selection

@@ -1,8 +1,8 @@
 import React from 'react';
-import SearchSelection from './SearchSelection.js';
-import './style.css';
+import SearchSelection from '../SearchSelection/SearchSelection.js';
 
-const Home = ({strings})=> (
+const Home = ()=> (
+
 
 <div className="container-fluid">
 
