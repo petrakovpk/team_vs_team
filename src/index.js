@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { render, hydrate } from 'react-dom';
@@ -5,19 +6,8 @@ import './index.css';
 import App from './Components/App/App';
 import * as serviceWorker from './serviceWorker';
 
-const rootElement = document.getElementById('root');
+ReactDOM.render(<App />, document.getElementById('root'));
 
-const app = (
-
-      <App />
-
-);
-
-if (rootElement.hasChildNodes()) {
-  hydrate(app, rootElement);
-} else {
-  render(app, rootElement);
-}
 
 
 // If you want your app to work offline and load faster, you can change

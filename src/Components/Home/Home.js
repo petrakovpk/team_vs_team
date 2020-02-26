@@ -1,18 +1,36 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-
+import SearchSelection from './SearchSelection.js';
+import './style.css';
 
 const Home = ({strings})=> (
-<div>
 
-<Container>
-    <Row>
-        <Col>
-            lol 3
-        </Col>
-    </Row>
+<div className="container-fluid">
 
-</Container>
+    <div className="row my-auto">
+
+        <div className="col-lg-2 offset-lg-3">
+
+            <SearchSelection/>
+
+        </div>
+
+         <div className="col-lg-1">
+
+        </div>
+
+         <div className="col-lg-1">
+
+        </div>
+
+         <div className="col-lg-2">
+
+            <SearchSelection/>
+
+        </div>
+
+
+    </div>
+
 
 </div>
 
