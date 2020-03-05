@@ -40,23 +40,129 @@ class Home extends React.Component {
 
         <div className="container-fluid">
 
+
+
             <div className="row my-auto">
 
                  <div className="col-lg-2 offset-lg-3">
 
-                   <SearchSelection heroesOptions = {this.state.heroes}></SearchSelection>
+                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'radiantHero1'/>
+
+                </div>
+
+                 <div className="col-lg-2 ">
+
+
+                </div>
+
+                <div className="col-lg-2 ">
+
+                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'direHero1'/>
+
+                </div>
+
+            </div>
+
+            <div className="row my-auto">
+
+                 <div className="col-lg-2 offset-lg-3">
+
+                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'radiantHero2'/>
+
+                </div>
+
+                 <div className="col-lg-2 ">
+
+
+                </div>
+
+                <div className="col-lg-2 ">
+
+                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'direHero2'/>
+
+                </div>
+
+            </div>
+
+            <div className="row my-auto">
+
+                 <div className="col-lg-2 offset-lg-3">
+
+                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'radiantHero3'/>
+
+                </div>
+
+                 <div className="col-lg-2 ">
+
+
+                </div>
+
+                <div className="col-lg-2 ">
+
+                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'direHero3'/>
+
+                </div>
+
+            </div>
+
+            <div className="row my-auto">
+
+                 <div className="col-lg-2 offset-lg-3">
+
+                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'radiantHero4'/>
+
+                </div>
+
+                 <div className="col-lg-2 ">
+
+
+                </div>
+
+                <div className="col-lg-2 ">
+
+                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'direHero4'/>
+
+                </div>
+
+            </div>
+
+            <div className="row my-auto">
+
+                 <div className="col-lg-2 offset-lg-3">
+
+                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'radiantHero5'/>
+
+                </div>
+
+                 <div className="col-lg-2 ">
+
+
+                </div>
+
+                <div className="col-lg-2 ">
+
+                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'direHero5'/>
+
+                </div>
+
+            </div>
+
+            <div className="row my-auto">
+
+                 <div className="col-lg-1 offset-lg-5">
+
+                     80
 
                 </div>
 
                  <div className="col-lg-3 ">
 
-                     <HeroChoosen></HeroChoosen>
-
-
+                     70
 
                 </div>
 
             </div>
+
 
         </div>)
     }
