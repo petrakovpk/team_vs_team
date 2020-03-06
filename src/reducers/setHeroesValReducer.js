@@ -8,7 +8,9 @@ import {
     CHANGE_DIRE_HERO_2_VAL,
     CHANGE_DIRE_HERO_3_VAL,
     CHANGE_DIRE_HERO_4_VAL,
-    CHANGE_DIRE_HERO_5_VAL
+    CHANGE_DIRE_HERO_5_VAL,
+    CHANGE_RADIANT_WIN_CHANCE,
+    CHANGE_DIRE_WIN_CHANCE
 
 } from  '../actions/setHeroVal.js'
 
@@ -24,6 +26,8 @@ const defaultState = {
     direHero3_val: 0,
     direHero4_val: 0,
     direHero5_val: 0,
+    radiantWinChance: 0,
+    direWinChance: 0
 }
 
 export const setHeroesValReducer = (state = defaultState, action) => {
@@ -84,6 +88,16 @@ export const setHeroesValReducer = (state = defaultState, action) => {
              return {
                  ...state,
                  direHero5_val: action.payload
+             };
+         case CHANGE_RADIANT_WIN_CHANCE:
+             return {
+                 ...state,
+                 radiantWinChance: action.payload
+             };
+         case CHANGE_DIRE_WIN_CHANCE:
+             return {
+                 ...state,
+                 direWinChance: action.payload
              };
      }
 

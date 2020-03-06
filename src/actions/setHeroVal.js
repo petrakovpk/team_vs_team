@@ -8,6 +8,10 @@ export const CHANGE_DIRE_HERO_2_VAL = 'CHANGE_DIRE_HERO_2_VAL';
 export const CHANGE_DIRE_HERO_3_VAL = 'CHANGE_DIRE_HERO_3_VAL';
 export const CHANGE_DIRE_HERO_4_VAL = 'CHANGE_DIRE_HERO_4_VAL';
 export const CHANGE_DIRE_HERO_5_VAL = 'CHANGE_DIRE_HERO_5_VAL';
+export const CHANGE_RADIANT_WIN_CHANCE = 'CHANGE_RADIANT_WIN_CHANCE';
+export const CHANGE_DIRE_WIN_CHANCE = 'CHANGE_DIRE_WIN_CHANCE';
+
+
 
 
 
@@ -78,5 +82,19 @@ export const changeDireHero5Val = (hero_val) => {
     return {
         type: CHANGE_DIRE_HERO_5_VAL,
         payload: hero_val
+    }
+}
+
+export const changeRadiantWinChance = (chance) => {
+    return {
+        type: CHANGE_RADIANT_WIN_CHANCE,
+        payload: chance
+    }
+}
+
+export const changeDireWinChance = (chance) => {
+    return {
+        type: CHANGE_DIRE_WIN_CHANCE,
+        payload: chance
     }
 }

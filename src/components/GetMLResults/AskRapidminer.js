@@ -11,6 +11,8 @@ import {
     , changeDireHero3Val
     , changeDireHero4Val
     , changeDireHero5Val
+    , changeDireWinChance
+    , changeRadiantWinChance
 
 } from  '../../actions/setHeroVal.js'
 
@@ -44,6 +46,11 @@ export const getMatchResult  = () => {
             body: post_rr
         })
             .then(res => res.json()).then((data) => {
+
+                store.dispatch(changeRadiantWinChance(Math.round(data['data'][0]['confidence(True)']*100)))
+
+                store.dispatch(changeDireWinChance(Math.round(data['data'][0]['confidence(False)']*100)))
+
 
 
                 for (var p = 0; p < 2; p++)

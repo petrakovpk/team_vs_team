@@ -1,7 +1,5 @@
 import React from 'react';
 import SearchSelection from '../SearchSelection/SearchSelection.jsx';
-
-import store from '../../store/store.js';
 import {connect} from "react-redux";
 
 class Home extends React.Component {
@@ -41,7 +39,9 @@ class Home extends React.Component {
             direHero2_val,
             direHero3_val,
             direHero4_val,
-            direHero5_val
+            direHero5_val,
+            radiantWinChance,
+            direWinChance
         } = this.props;
 
 
@@ -56,13 +56,13 @@ class Home extends React.Component {
 
                  <div className="col-lg-1 offset-lg-5">
 
-
+                     {radiantWinChance}
 
                 </div>
 
                  <div className="col-lg-3 ">
 
-
+                     {direWinChance}
 
                 </div>
 
@@ -235,6 +235,8 @@ const mapStateToProps = (state) => {
         direHero3_val: state.setHeroesValReducer.direHero3_val,
         direHero4_val: state.setHeroesValReducer.direHero4_val,
         direHero5_val: state.setHeroesValReducer.direHero5_val,
+        radiantWinChance: state.setHeroesValReducer.radiantWinChance,
+        direWinChance: state.setHeroesValReducer.direWinChance
 
 
     }
