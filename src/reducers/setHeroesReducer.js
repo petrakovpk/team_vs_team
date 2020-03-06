@@ -26,9 +26,7 @@ const defaultState = {
     direHero2_name: '',
     direHero3_name: '',
     direHero4_name: '',
-    direHero5_name: '',
-
-
+    direHero5_name: ''
 
 };
 

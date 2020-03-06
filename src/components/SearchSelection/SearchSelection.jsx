@@ -1,6 +1,7 @@
 import React from 'react'
 import { Dropdown } from 'semantic-ui-react'
 import {bindActionCreators} from 'redux'
+import {getMatchResult} from "../../components/GetMLResults/AskRapidminer"
 import {changeRadiantHero1
     ,changeRadiantHero2
     ,changeRadiantHero3
@@ -41,20 +42,16 @@ class SearchSelection extends React.Component {
            , changeDireHero4
            , changeDireHero5
 
-
        } = this.props;
 
        const changeHero = (hero_type, hero_name) =>{
 
-            console.log(hero_type)
-            console.log(hero_name)
-
            switch (hero_type){
 
                case 'radiantHero1':
-                   return changeRadiantHero1(hero_name);
+                    return changeRadiantHero1(hero_name);
                case 'radiantHero2':
-                   return changeRadiantHero2(hero_name);
+                    return changeRadiantHero2(hero_name);
                case 'radiantHero3':
                    return changeRadiantHero3(hero_name);
                case 'radiantHero4':
@@ -76,8 +73,19 @@ class SearchSelection extends React.Component {
            }
 
 
+
+
+
+
+
+
+
         }
 
+        const getML = () => {
+
+            getMatchResult()
+        }
 
 
         return (
@@ -92,6 +100,7 @@ class SearchSelection extends React.Component {
 
             onChange={(e,data) => {
                 changeHero(hero_type, data.value);
+                getML()
             }}
 
           />

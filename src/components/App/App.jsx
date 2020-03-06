@@ -4,10 +4,9 @@ import Home from '../Home'
 import Navigation from '../Navigation'
 import {combineReducers, createStore} from 'redux'
 import {Provider} from 'react-redux'
-import {setHeroesReducer} from "../../reducers/setHeroesReducer.js";
+import store from '../../store/store.js';
 
 
-const store = createStore(combineReducers({setHeroesReducer}))
 
 
 

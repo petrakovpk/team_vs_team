@@ -1,12 +1,8 @@
 import React from 'react';
 import SearchSelection from '../SearchSelection/SearchSelection.jsx';
-import HeroChoosen from '../HeroChoosen/HeroChoosen.jsx';
 
-
+import store from '../../store/store.js';
 import {connect} from "react-redux";
-import {changeRadiantHero1} from "../../actions/setHero";
-import {bindActionCreators} from 'redux'
-
 
 class Home extends React.Component {
 
@@ -28,7 +24,6 @@ class Home extends React.Component {
 
                     }
 
-                    console.log(this.state.heroes)
 
                 }
             )
@@ -36,9 +31,42 @@ class Home extends React.Component {
 
     render() {
 
+        const {
+            radiantHero1_val,
+            radiantHero2_val,
+            radiantHero3_val,
+            radiantHero4_val,
+            radiantHero5_val,
+            direHero1_val,
+            direHero2_val,
+            direHero3_val,
+            direHero4_val,
+            direHero5_val
+        } = this.props;
+
+
+
         return (
 
+
+
         <div className="container-fluid">
+
+             <div className="row my-auto">
+
+                 <div className="col-lg-1 offset-lg-5">
+
+
+
+                </div>
+
+                 <div className="col-lg-3 ">
+
+
+
+                </div>
+
+            </div>
 
 
 
@@ -50,8 +78,15 @@ class Home extends React.Component {
 
                 </div>
 
-                 <div className="col-lg-2 ">
+                 <div className="col-lg-1 ">
 
+                     {radiantHero1_val}
+
+                </div>
+
+                 <div className="col-lg-1 ">
+
+                     {direHero1_val}
 
                 </div>
 
@@ -71,8 +106,16 @@ class Home extends React.Component {
 
                 </div>
 
-                 <div className="col-lg-2 ">
+                 <div className="col-lg-1">
 
+                      {radiantHero2_val}
+
+
+                </div>
+
+                 <div className="col-lg-1 ">
+
+                     {direHero2_val}
 
                 </div>
 
@@ -92,8 +135,16 @@ class Home extends React.Component {
 
                 </div>
 
-                 <div className="col-lg-2 ">
+                 <div className="col-lg-1 ">
 
+                      {radiantHero3_val}
+
+
+                </div>
+
+                 <div className="col-lg-1 ">
+
+                     {direHero3_val}
 
                 </div>
 
@@ -113,8 +164,16 @@ class Home extends React.Component {
 
                 </div>
 
-                 <div className="col-lg-2 ">
+                 <div className="col-lg-1 ">
 
+                      {radiantHero4_val}
+
+
+                </div>
+
+                 <div className="col-lg-1 ">
+
+                     {direHero4_val}
 
                 </div>
 
@@ -134,8 +193,16 @@ class Home extends React.Component {
 
                 </div>
 
-                 <div className="col-lg-2 ">
+                 <div className="col-lg-1 ">
 
+                      {radiantHero5_val}
+
+
+                </div>
+
+                 <div className="col-lg-1 ">
+
+                     {direHero5_val}
 
                 </div>
 
@@ -147,21 +214,7 @@ class Home extends React.Component {
 
             </div>
 
-            <div className="row my-auto">
 
-                 <div className="col-lg-1 offset-lg-5">
-
-                     80
-
-                </div>
-
-                 <div className="col-lg-3 ">
-
-                     70
-
-                </div>
-
-            </div>
 
 
         </div>)
@@ -169,5 +222,23 @@ class Home extends React.Component {
 
 }
 
+const mapStateToProps = (state) => {
+    return {
 
-export default Home
+        radiantHero1_val: state.setHeroesValReducer.radiantHero1_val,
+        radiantHero2_val: state.setHeroesValReducer.radiantHero2_val,
+        radiantHero3_val: state.setHeroesValReducer.radiantHero3_val,
+        radiantHero4_val: state.setHeroesValReducer.radiantHero4_val,
+        radiantHero5_val: state.setHeroesValReducer.radiantHero5_val,
+        direHero1_val: state.setHeroesValReducer.direHero1_val,
+        direHero2_val: state.setHeroesValReducer.direHero2_val,
+        direHero3_val: state.setHeroesValReducer.direHero3_val,
+        direHero4_val: state.setHeroesValReducer.direHero4_val,
+        direHero5_val: state.setHeroesValReducer.direHero5_val,
+
+
+    }
+}
+
+
+export default connect(mapStateToProps)(Home)
