@@ -193,7 +193,7 @@ class Home extends React.Component {
 
                 </div>
 
-                 <div className="col-lg-1 ">
+                 <div className="col-lg-1">
 
                       {radiantHero5_val}
 
