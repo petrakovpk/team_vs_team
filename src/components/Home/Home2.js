@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchSelection from '../SearchSelection/SearchSelection.js';
+import SearchSelection from './SearchSelectionHero/SearchSelection.js';
 import getMatchResult from '../GetMLResults/AskRapidminer'
 
 class Home extends React.Component {

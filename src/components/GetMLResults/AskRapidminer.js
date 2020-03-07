@@ -47,6 +47,8 @@ export const getMatchResult  = () => {
         })
             .then(res => res.json()).then((data) => {
 
+                console.log(data['data'][0])
+
                 store.dispatch(changeRadiantWinChance(Math.round(data['data'][0]['confidence(True)']*100)))
 
                 store.dispatch(changeDireWinChance(Math.round(data['data'][0]['confidence(False)']*100)))
@@ -57,19 +59,36 @@ export const getMatchResult  = () => {
                 {
 
                     let type = ''
+                    let radiant_koeff = 0
+                    let dire_koeff = 0
+
+                    //prediction(radiant_win)
+
+                    if(data['data'][0]['prediction(radiant_win)'] === 'True'){
+
+                        radiant_koeff = 1
+                        dire_koeff = -1
+
+
+                    } else {
+
+                        radiant_koeff = -1
+                        dire_koeff = 1
+
+                    }
 
                     if(p===0) {
                         type = 'Support Prediction'
+
                     }
+
+
 
 
                     if(p===1) {
                         type = 'Conradict Prediction'
+
                     }
-
-
-
-
                     if (data['data'][0][type] === undefined ) {
                             continue
                         }
@@ -97,61 +116,61 @@ export const getMatchResult  = () => {
 
                             case 'radiant_hero_1_name':
 
-                                store.dispatch(changeRadiantHero1Val(concat_array.val))
+                                store.dispatch(changeRadiantHero1Val(concat_array.val*radiant_koeff))
 
                                 continue
 
                             case 'radiant_hero_2_name':
 
-                                store.dispatch(changeRadiantHero2Val(concat_array.val))
+                                store.dispatch(changeRadiantHero2Val(concat_array.val*radiant_koeff))
 
                                 continue
 
                             case 'radiant_hero_3_name':
 
-                                store.dispatch(changeRadiantHero3Val(concat_array.val))
+                                store.dispatch(changeRadiantHero3Val(concat_array.val*radiant_koeff))
 
                                 continue
 
                             case 'radiant_hero_4_name':
 
-                                store.dispatch(changeRadiantHero4Val(concat_array.val))
+                                store.dispatch(changeRadiantHero4Val(concat_array.val*radiant_koeff))
 
                                 continue
 
                             case 'radiant_hero_5_name':
 
-                                store.dispatch(changeRadiantHero5Val(concat_array.val))
+                                store.dispatch(changeRadiantHero5Val(concat_array.val*radiant_koeff))
 
                                 continue
 
                             case 'dire_hero_1_name':
 
-                                store.dispatch(changeDireHero1Val(concat_array.val))
+                                store.dispatch(changeDireHero1Val(concat_array.val*dire_koeff))
 
                                 continue
 
                             case 'dire_hero_2_name':
 
-                                store.dispatch(changeDireHero2Val(concat_array.val))
+                                store.dispatch(changeDireHero2Val(concat_array.val*dire_koeff))
 
                                 continue
 
                             case 'dire_hero_3_name':
 
-                                store.dispatch(changeDireHero3Val(concat_array.val))
+                                store.dispatch(changeDireHero3Val(concat_array.val*dire_koeff))
 
                                 continue
 
                             case 'dire_hero_4_name':
 
-                                store.dispatch(changeDireHero4Val(concat_array.val))
+                                store.dispatch(changeDireHero4Val(concat_array.val*dire_koeff))
 
                                 continue
 
                             case 'dire_hero_5_name':
 
-                                store.dispatch(changeDireHero5Val(concat_array.val))
+                                store.dispatch(changeDireHero5Val(concat_array.val*dire_koeff))
 
                                 continue
                         }

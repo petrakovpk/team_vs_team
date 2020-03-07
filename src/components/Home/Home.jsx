@@ -1,6 +1,9 @@
 import React from 'react';
-import SearchSelection from '../SearchSelection/SearchSelection.jsx';
+import SearchSelectionHero from './SearchSelectionHero/SearchSelectionHero.jsx';
 import {connect} from "react-redux";
+import SearchSelectionTeam from "./SearchSelectionTeam";
+
+
 
 class Home extends React.Component {
 
@@ -45,12 +48,41 @@ class Home extends React.Component {
         } = this.props;
 
 
+        const teamsOptions = [
+
+            {key: "navi", value: "navi", text: "navi"},
+
+            {key: "vp", value: "vp", text: "virtuspro"},
+
+            {key: "tr", value: "tr", text: "Team Radiant"}
+
+            ]
+
+
+
+
 
         return (
 
 
 
         <div className="container-fluid">
+
+            <div className="row my-auto">
+
+                 <div className="col-lg-2 offset-lg-4">
+
+                     <SearchSelectionTeam teamsOptions = {teamsOptions}/>
+
+                </div>
+
+                 <div className="col-lg-3 ">
+
+                     <SearchSelectionTeam teamsOptions = {teamsOptions}/>
+
+                </div>
+
+            </div>
 
              <div className="row my-auto">
 
@@ -74,7 +106,7 @@ class Home extends React.Component {
 
                  <div className="col-lg-2 offset-lg-3">
 
-                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'radiantHero1'/>
+                   <SearchSelectionHero heroesOptions = {this.state.heroes} hero_type = 'radiantHero1'/>
 
                 </div>
 
@@ -92,7 +124,7 @@ class Home extends React.Component {
 
                 <div className="col-lg-2 ">
 
-                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'direHero1'/>
+                   <SearchSelectionHero heroesOptions = {this.state.heroes} hero_type = 'direHero1'/>
 
                 </div>
 
@@ -102,7 +134,7 @@ class Home extends React.Component {
 
                  <div className="col-lg-2 offset-lg-3">
 
-                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'radiantHero2'/>
+                   <SearchSelectionHero heroesOptions = {this.state.heroes} hero_type = 'radiantHero2'/>
 
                 </div>
 
@@ -121,7 +153,7 @@ class Home extends React.Component {
 
                 <div className="col-lg-2 ">
 
-                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'direHero2'/>
+                   <SearchSelectionHero heroesOptions = {this.state.heroes} hero_type = 'direHero2'/>
 
                 </div>
 
@@ -131,7 +163,7 @@ class Home extends React.Component {
 
                  <div className="col-lg-2 offset-lg-3">
 
-                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'radiantHero3'/>
+                   <SearchSelectionHero heroesOptions = {this.state.heroes} hero_type = 'radiantHero3'/>
 
                 </div>
 
@@ -150,7 +182,7 @@ class Home extends React.Component {
 
                 <div className="col-lg-2 ">
 
-                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'direHero3'/>
+                   <SearchSelectionHero heroesOptions = {this.state.heroes} hero_type = 'direHero3'/>
 
                 </div>
 
@@ -160,7 +192,7 @@ class Home extends React.Component {
 
                  <div className="col-lg-2 offset-lg-3">
 
-                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'radiantHero4'/>
+                   <SearchSelectionHero heroesOptions = {this.state.heroes} hero_type = 'radiantHero4'/>
 
                 </div>
 
@@ -179,7 +211,7 @@ class Home extends React.Component {
 
                 <div className="col-lg-2 ">
 
-                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'direHero4'/>
+                   <SearchSelectionHero heroesOptions = {this.state.heroes} hero_type = 'direHero4'/>
 
                 </div>
 
@@ -189,7 +221,7 @@ class Home extends React.Component {
 
                  <div className="col-lg-2 offset-lg-3">
 
-                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'radiantHero5'/>
+                   <SearchSelectionHero heroesOptions = {this.state.heroes} hero_type = 'radiantHero5'/>
 
                 </div>
 
@@ -208,7 +240,7 @@ class Home extends React.Component {
 
                 <div className="col-lg-2 ">
 
-                   <SearchSelection heroesOptions = {this.state.heroes} hero_type = 'direHero5'/>
+                   <SearchSelectionHero heroesOptions = {this.state.heroes} hero_type = 'direHero5'/>
 
                 </div>
 

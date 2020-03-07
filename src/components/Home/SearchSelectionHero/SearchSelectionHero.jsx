@@ -1,7 +1,7 @@
 import React from 'react'
 import { Dropdown } from 'semantic-ui-react'
 import {bindActionCreators} from 'redux'
-import {getMatchResult} from "../../components/GetMLResults/AskRapidminer"
+import {getMatchResult} from "../../GetMLResults/AskRapidminer"
 import {changeRadiantHero1
     ,changeRadiantHero2
     ,changeRadiantHero3
@@ -12,14 +12,14 @@ import {changeRadiantHero1
     ,changeDireHero3
     ,changeDireHero4
     ,changeDireHero5
-} from "../../actions/setHero";
+} from "../../../actions/setHero";
 import {connect} from "react-redux";
 
 
 
 
 
-class SearchSelection extends React.Component {
+class SearchSelectionHero extends React.Component {
    constructor(props){
         super(props);
     }
@@ -159,4 +159,4 @@ styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css
 document.head.appendChild(styleLink);
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(SearchSelection)
+export default connect(mapStateToProps,mapDispatchToProps)(SearchSelectionHero)
